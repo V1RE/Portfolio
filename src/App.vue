@@ -1,20 +1,26 @@
 <template>
   <div id="app">
     <TopBar />
+    <MaterialCard>test</MaterialCard>
   </div>
 </template>
 
 <script>
 import TopBar from "./components/TopBar";
+import MaterialCard from "./components/MaterialCard";
 
 export default {
   name: "app",
   components: {
-    TopBar
+    TopBar,
+    MaterialCard
   }
 };
 </script>
 
 <style lang="scss">
-// @import "./assets/styles/main.scss";
+.materialcard {
+  top: 100px;
+  position: absolute;
+}
 </style>
