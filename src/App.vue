@@ -1,7 +1,10 @@
 <template>
   <div id="app">
     <TopBar />
-    <MaterialCard>test</MaterialCard>
+    <MaterialCard>
+      test
+      <template v-slot:content>Dit is echt zieke content</template>
+    </MaterialCard>
   </div>
 </template>
 
