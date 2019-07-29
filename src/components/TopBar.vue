@@ -25,8 +25,9 @@ header {
   display: grid;
   grid-template-columns: auto 100% auto;
   grid-template-areas: "header header header";
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 
-  @media screen {
+  @media (min-width: 1170px) {
     grid-template-columns: auto 1170px auto;
     grid-template-areas: ". header .";
   }
