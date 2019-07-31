@@ -1,35 +1,30 @@
 <template>
   <div id="app">
     <TopBar />
-    <MainLayout>
+    <FullOpener>
       <MaterialCard>
-        Hallo
-        <template v-slot:content>Dit is echt zieke content</template>
+        <InfoCard></InfoCard>
       </MaterialCard>
-      <MaterialCard>
-        te
-        <br />st
-        <template v-slot:content>Dit is echt zieke content</template>
-      </MaterialCard>
-      <MaterialCard>
-        wederom een leuke test hoor
-        <template v-slot:content>Dit is echt zieke content</template>
-      </MaterialCard>
-    </MainLayout>
+    </FullOpener>
+    <!-- <main>
+      <div class="safa">woppa</div>
+    </main>-->
   </div>
 </template>
 
 <script>
 import TopBar from "./components/TopBar";
 import MaterialCard from "./components/MaterialCard";
-import MainLayout from "./components/MainLayout";
+import FullOpener from "./components/FullOpener";
+import InfoCard from "./components/InfoCard";
 
 export default {
   name: "app",
   components: {
     TopBar,
     MaterialCard,
-    MainLayout
+    FullOpener,
+    InfoCard
   }
 };
 </script>
@@ -37,5 +32,8 @@ export default {
 <style lang="scss">
 body {
   margin: 0;
+  .safa {
+    height: 200vh;
+  }
 }
 </style>
