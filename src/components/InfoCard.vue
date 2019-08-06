@@ -18,12 +18,12 @@
       <a href="https://wa.me/31627035882" target="_blank" rel="noopener" title="+31 6 27035882">
         <img src="../assets/whatsapp.svg" alt="Whatsapp" />
       </a>
-      <a href="https://ment.ink" target="_blank" rel="noopener" title="ment.ink">
+      <!-- <a href="https://ment.ink" target="_blank" rel="noopener" title="ment.ink">
         <img src="../assets/website.svg" alt="Website" />
       </a>
       <a href="https://github.com/V1RE" target="_blank" rel="noopener" title="Github">
         <img src="../assets/github.svg" alt="Github" />
-      </a>
+      </a>-->
     </div>
   </div>
 </template>
@@ -35,14 +35,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.no-webp {
-  .infopicture {
-    background-image: url("../assets/profilepicture.png");
-  }
-}
 .infowrapper {
   .infopicture {
-    background-image: url("../assets/profilepicture.webp");
+    background-image: url("../assets/profilepicture.png");
     background-size: cover;
     background-position: 50% 50%;
     border-radius: 999px;
@@ -59,6 +54,14 @@ export default {
       font-size: 26px;
       margin: 0;
       margin-bottom: 5px;
+
+      @media (max-width: 497px) and (min-width: 348px) {
+        font-size: 4.931vw;
+      }
+
+      @media (max-width: 348px) {
+        font-size: 17.159px;
+      }
     }
 
     p {
