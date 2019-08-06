@@ -4,7 +4,7 @@
     <div class="infocontent">
       <h2>Hi! I'm Niels,</h2>
       <p>
-        <span>a web developer trying to create experiences that stick with people.</span>
+        <span>a web developer creating experiences that stick with people.</span>
         <span class="cursor">|</span>
       </p>
     </div>
@@ -20,6 +20,9 @@
       </a>
       <a href="https://ment.ink" target="_blank" rel="noopener" title="ment.ink">
         <img src="../assets/website.svg" alt="Website" />
+      </a>
+      <a href="https://github.com/V1RE" target="_blank" rel="noopener" title="Github">
+        <img src="../assets/github.svg" alt="Github" />
       </a>
     </div>
   </div>
@@ -50,10 +53,11 @@ export default {
       font-weight: bold;
       font-size: 26px;
       margin: 0;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
     }
 
     p {
+      margin-top: 0;
       max-width: 280px;
 
       .cursor {
