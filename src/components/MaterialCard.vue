@@ -23,9 +23,21 @@ export default {
   border-radius: 5px;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: fadeInUp 1s cubic-bezier(0, 0, 0.2, 1) 0s 1 normal both;
 
   &:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, calc(-50% + 50px));
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }
 </style>

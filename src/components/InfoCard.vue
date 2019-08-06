@@ -2,18 +2,24 @@
   <div class="infowrapper">
     <div class="infopicture"></div>
     <div class="infocontent">
-      <h2>Niels Mentink</h2>
-      <a href="https://instagram.com/nmentink/" target="_blank" rel="noopener">
-        <img src="../assets/instagram.svg" alt="Instagram" />@nmentink
+      <h2>Hi! I'm Niels,</h2>
+      <p>
+        <span>a web developer trying to create experiences that stick with people.</span>
+        <span class="cursor">|</span>
+      </p>
+    </div>
+    <div class="links">
+      <a href="https://instagram.com/nmentink/" target="_blank" rel="noopener" title="@nmentink">
+        <img src="../assets/instagram.svg" alt="Instagram" />
       </a>
-      <a href="mailto:niels@ment.ink" target="_blank" rel="noopener">
-        <img src="../assets/email.svg" alt="Email" />niels@ment.ink
+      <a href="mailto:niels@ment.ink" target="_blank" rel="noopener" title="niels@ment.ink">
+        <img src="../assets/email.svg" alt="Email" />
       </a>
-      <a href="https://wa.me/31627035882" target="_blank" rel="noopener">
-        <img src="../assets/whatsapp.svg" alt="Whatsapp" />+31 6 27035882
+      <a href="https://wa.me/31627035882" target="_blank" rel="noopener" title="+31 6 27035882">
+        <img src="../assets/whatsapp.svg" alt="Whatsapp" />
       </a>
-      <a href="https://ment.ink" target="_blank" rel="noopener">
-        <img src="../assets/website.svg" alt="Website" />ment.ink
+      <a href="https://ment.ink" target="_blank" rel="noopener" title="ment.ink">
+        <img src="../assets/website.svg" alt="Website" />
       </a>
     </div>
   </div>
@@ -28,47 +34,38 @@ export default {
 <style lang="scss" scoped>
 .infowrapper {
   .infopicture {
-    background-image: url(../assets/profilepicture.png);
+    background-image: url("../assets/profilepicture.png");
     background-size: cover;
     background-position: 50% 50%;
     border-radius: 999px;
     width: 144px;
     height: 144px;
-    float: left;
-    margin-right: 15px;
-
-    @media (max-width: 960px) {
-      float: none;
-      margin-right: auto;
-      margin-left: auto;
-      margin-bottom: 15px;
-    }
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
   }
 
   .infocontent {
-    float: left;
-
-    @media (max-width: 960px) {
-      float: none;
-    }
-
     h2 {
       font-weight: bold;
       font-size: 26px;
       margin: 0;
       margin-bottom: 15px;
+    }
 
-      // @media (max-width: 360px) {
-      //   font-size: 18px;
-      //   text-align: center;
-      // }
+    p {
+      max-width: 280px;
+
+      .cursor {
+        animation: 1s blink step-end infinite;
+      }
     }
 
     a {
       color: black;
       text-decoration: none;
       font-size: 15px;
-      line-height: 20px;
+      line-height: 25px;
       margin-bottom: 5px;
       display: block;
 
@@ -77,7 +74,7 @@ export default {
       }
 
       img {
-        vertical-align: bottom;
+        vertical-align: middle;
         margin-right: 5px;
       }
 
@@ -89,6 +86,33 @@ export default {
         text-decoration: underline;
       }
     }
+  }
+
+  .links {
+    margin: 0 -15px -15px -15px;
+    text-align: center;
+
+    a {
+      height: 48px;
+      width: 48px;
+      display: inline-block;
+
+      img {
+        height: 24px;
+        width: 24px;
+        margin: 12px;
+      }
+    }
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: black;
   }
 }
 </style>
