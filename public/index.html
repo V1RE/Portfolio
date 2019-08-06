@@ -3,19 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- TODO: add meta description -->
+    <link rel="canonical" href="https://niels.ment.ink" />
     <meta
       name="description"
-      content="Hi, I'm Niels, I made this website to showcase some of the projects I've worked on."
+      content="Hi! I'm Niels, a web developer creating experiences that stick with people."
     />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta name="theme-color" content="#4030E8" />
     <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
     <!-- TODO: defer loading font -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap"
-      rel="stylesheet"
-    />
+
     <title>Niels Mentink</title>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -28,8 +25,32 @@
         dataLayer.push(arguments);
       }
       gtag("js", new Date());
-
       gtag("config", "UA-110494690-2");
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "http://www.schema.org",
+        "@type": "person",
+        "name": "Niels Mentink",
+        "jobTitle": "Web Developer",
+        "gender": "male",
+        "url": "https://niels.ment.ink",
+        "sameAs": [
+          "https://ment.ink",
+          "https://nielsmentink.tk",
+          "https://www.ment.ink",
+          "https://www.nielsmentink.tk",
+          "https://www.niels.ment.ink"
+        ],
+        "image": "https://niels.ment.ink/me.png",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Netherlands"
+        },
+        "email": "niels@ment.ink",
+        "birthDate": "2000-12-28",
+        "telephone": "+31 6 27035882"
+      }
     </script>
   </head>
   <body>
