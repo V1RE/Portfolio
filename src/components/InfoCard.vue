@@ -35,9 +35,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.infowrapper {
+.no-webp {
   .infopicture {
     background-image: url("../assets/profilepicture.png");
+  }
+}
+.infowrapper {
+  .infopicture {
+    background-image: url("../assets/profilepicture.webp");
     background-size: cover;
     background-position: 50% 50%;
     border-radius: 999px;
