@@ -36,6 +36,7 @@ header {
   grid-template-columns: auto 100% auto;
   grid-template-areas: "header header header";
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  animation: fadeInDown 1s cubic-bezier(0, 0, 0.2, 1) 0s 1 normal both;
 
   @media (min-width: 1170px) {
     grid-template-columns: auto 1170px auto;
@@ -94,6 +95,17 @@ header {
         opacity: 0;
       }
     }
+  }
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-64px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
