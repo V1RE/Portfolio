@@ -1,5 +1,5 @@
 [build]
-  #command = "gulp prod"
+  command = "npm build"
   publish = "dist"
 
 [dev]
