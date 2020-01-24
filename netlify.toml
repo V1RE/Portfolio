@@ -1,0 +1,9 @@
+[build]
+  #command = "gulp prod"
+  publish = "dist"
+
+[dev]
+  command = "eleventy --serve"
+  port = 8080
+  targetPort = 8080
+  publish = "dist"
