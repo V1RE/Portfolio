@@ -1,0 +1,13 @@
+[build]
+  command = "npm build"
+  publish = "dist"
+
+[dev]
+  command = "eleventy --serve"
+  port = 8080
+  targetPort = 8080
+  publish = "dist"
+
+[[redirects]]
+  from = "https://ment.ink"
+  to = "https://niels.ment.ink"
