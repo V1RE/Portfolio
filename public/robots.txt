@@ -1,0 +1,3 @@
+Sitemap: https://niels.ment.ink/sitemap.xml
+User-agent: *
+Disallow:
