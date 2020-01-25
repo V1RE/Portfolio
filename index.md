@@ -1,5 +1,6 @@
 ---
 layout: main.hbs
+pageid: home
 title: Home
 ---
 

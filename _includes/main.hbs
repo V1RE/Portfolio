@@ -5,11 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>{{title}} | Niels Mentink</title>
+  <title>{{title}} {{settings.title.separator}} {{settings.title.suffix}}</title>
+  <link rel="stylesheet" href="/css/main.css">
 </head>
 
-<body>
+<body id="{{pageid}}">
+  {{#> card }}
   {{{content}}}
+  {{/card}}
+
+  <script src="/icons/feather.min.js"></script>
 </body>
 
 </html>
