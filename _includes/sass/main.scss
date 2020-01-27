@@ -1,6 +1,8 @@
-@import "_variables";
-@import "_reset";
-@import "_home";
+@import "./variables";
+@import "./reset";
+@import "./types";
+@import "./card";
+@import "./home";
 
 html {
   scroll-behavior: smooth;
@@ -17,9 +19,11 @@ html {
   flex-direction: column;
 
   header {
-    min-height: $headerHeight;
-    position: sticky;
+    height: $headerHeight;
+    position: fixed;
     top: 0;
+    right: 0;
+    left: 0;
     background-color: red;
   }
 

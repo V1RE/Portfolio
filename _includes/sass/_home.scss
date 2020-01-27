@@ -3,6 +3,12 @@
     main {
       #intro {
         background-color: $primary;
+        height: 100vh;
+        display: flex;
+
+        .card {
+          margin: auto;
+        }
       }
 
       #projects {
