@@ -14,8 +14,15 @@ gulp.task("feather", function() {
     .pipe(gulp.dest("./dist/icons"));
 });
 
-gulp.task("build", gulp.series("sassCompile", "feather"));
+gulp.task("assets", () => {
+  return gulp.src("./assets").pipe(gulp.dest("./dist/"));
+});
+
+gulp.task("build", gulp.series("sassCompile", "feather", "assets"));
 
 gulp.task("default", function() {
-  gulp.watch(["./_includes/sass/**/*.scss"], gulp.series("build"));
+  gulp.watch(
+    ["./_includes/sass/**/*.scss", "./assets/*"],
+    gulp.series("build")
+  );
 });

@@ -1,2 +1,34 @@
 @import "_variables";
+@import "_reset";
 @import "_home";
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+}
+
+.fullheight {
+  min-height: calc(100vh - #{$headerHeight});
+  scroll-snap-align: end;
+}
+
+.mainwrapper {
+  display: flex;
+  flex-direction: column;
+
+  header {
+    min-height: $headerHeight;
+    position: sticky;
+    top: 0;
+    background-color: red;
+  }
+
+  main {
+  }
+
+  footer {
+    height: 200px;
+    background-color: blue;
+    scroll-snap-align: end;
+  }
+}

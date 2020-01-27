@@ -1,3 +1,5 @@
 $primary: #80ff72;
 $secondary: #7ee8fa;
-$gradient: linear-gradient(315deg, $secondary 0%, $primary 74%);
+$gradient: linear-gradient(to top, $secondary 0%, $primary 74%);
+
+$headerHeight: 60px;

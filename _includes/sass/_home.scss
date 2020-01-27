@@ -1,5 +1,13 @@
 #home {
-  h1 {
-    color: red;
+  .mainwrapper {
+    main {
+      #intro {
+        background-color: $primary;
+      }
+
+      #projects {
+        background-color: $secondary;
+      }
+    }
   }
 }
