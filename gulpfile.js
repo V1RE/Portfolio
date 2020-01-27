@@ -15,7 +15,7 @@ gulp.task("feather", function() {
 });
 
 gulp.task("assets", () => {
-  return gulp.src("./assets").pipe(gulp.dest("./dist/"));
+  return gulp.src("./assets", { allowEmpty: true }).pipe(gulp.dest("./dist/"));
 });
 
 gulp.task("build", gulp.series("sassCompile", "feather", "assets"));
