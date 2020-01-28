@@ -1,0 +1,5 @@
+@function fluid($minValue, $maxValue) {
+  $x: ($maxValue - $minValue)/ ($display-wide - $display-narrow);
+  $y: $maxValue - $display-wide * $x;
+  @return calc(#{100 * $x}vw + #{$y}px);
+}

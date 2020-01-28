@@ -5,14 +5,36 @@
         background-color: $primary;
         height: 100vh;
         display: flex;
+        align-items: center;
+        justify-content: center;
 
         .card {
-          margin: auto;
+          .profilepicture {
+            background-image: url("/pf.webp"), url("/pf.jpeg");
+            height: fluid(100, 150);
+            width: fluid(100, 150);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            border-radius: calc(2 * #{fluid(100, 150)});
+            margin-bottom: 15px;
+            align-self: center;
+          }
+
+          .greeting {
+            margin-bottom: fluid(5, 10);
+          }
+
+          .description {
+            width: fluid(170, 300);
+            font-size: fluid(16, 20);
+          }
         }
       }
 
       #projects {
         background-color: $secondary;
+        scroll-margin-top: $headerHeight;
       }
     }
   }

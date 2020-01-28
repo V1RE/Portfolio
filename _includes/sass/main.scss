@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./functions";
 @import "./reset";
 @import "./types";
 @import "./card";
@@ -11,7 +12,7 @@ html {
 
 .fullheight {
   min-height: calc(100vh - #{$headerHeight});
-  scroll-snap-align: end;
+  scroll-snap-align: start;
 }
 
 .mainwrapper {
