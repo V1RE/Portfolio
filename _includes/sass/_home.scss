@@ -8,6 +8,50 @@
 
         .card {
           margin: auto;
+
+          .pfwrapper {
+            position: absolute;
+            width: 100vw;
+            height: 200vh;
+            left: 0;
+            right: 0;
+
+            .profilepictureslider {
+              position: sticky;
+              top: 75px;
+              height: fluid(100, 150);
+
+              .profilepicture {
+                background-image: url("/pf.webp"), url("/pf.jpeg");
+                height: fluid(100, 150);
+                width: fluid(100, 150);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: calc(2 * #{fluid(100, 150)});
+                // margin-bottom: 15px;
+                margin: 0 auto 15px;
+                align-self: center;
+                position: absolute;
+              }
+            }
+          }
+
+          .profilepicturespacer {
+            height: fluid(100, 150);
+            width: fluid(100, 150);
+            margin-bottom: 15px;
+            align-self: center;
+          }
+
+          .greeting {
+            margin-bottom: fluid(5, 10);
+          }
+
+          .description {
+            width: fluid(170, 300);
+            font-size: fluid(16, 20);
+          }
         }
       }
 
