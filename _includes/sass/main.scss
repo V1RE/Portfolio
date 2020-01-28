@@ -12,7 +12,7 @@ html {
 
 .fullheight {
   min-height: calc(100vh - #{$headerHeight});
-  scroll-snap-align: end;
+  scroll-snap-align: start;
 }
 
 .mainwrapper {
