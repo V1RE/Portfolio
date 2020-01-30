@@ -8,7 +8,8 @@ $(document).ready(() => {
 });
 
 const setHeaderTop = () => {
-  let headerHeight = $("header").height() + 6;
+  let header = $("#home header");
+  let headerHeight = header.height() + 6;
   let introHeight = $("#intro").height();
   let scrollTop = $(window).scrollTop();
   let headerTop = scrollTop - (introHeight - headerHeight);
@@ -17,21 +18,19 @@ const setHeaderTop = () => {
     scrollTop >= introHeight - headerHeight * 2 &&
     scrollTop <= introHeight - headerHeight
   ) {
-    $("header")
-      .addClass("show scrolling")
-      .css({ top: headerTop });
+    header.addClass("show scrolling").css({ top: headerTop });
   } else if (scrollTop >= introHeight - headerHeight * 2) {
-    $("header")
+    header
       .addClass("show")
       .removeClass("scrolling")
       .css({ top: "" });
   } else {
-    $("header").removeClass("show scrolling");
+    header.removeClass("show scrolling").css({ top: "" });
   }
 };
 
 const parrallaxCard = () => {
-  let introCard = $(".card");
+  let introCard = $("#home #intro .card");
   let scrollTop = $(window).scrollTop();
 
   introCard.css("transform", `translateY(${scrollTop * 0.3}px)`);
