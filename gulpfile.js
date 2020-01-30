@@ -24,7 +24,7 @@ gulp.task("build", gulp.series("sassCompile", "feather", "assets"));
 
 gulp.task("default", function() {
   gulp.watch(
-    ["./_includes/sass/**/*.scss", "./assets/*"],
+    ["./_includes/sass/**/*.scss", "./assets/**"],
     gulp.series("build")
   );
 });

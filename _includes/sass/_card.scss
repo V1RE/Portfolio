@@ -1,6 +1,6 @@
 .card {
-  background-color: #fff;
-  color: #000;
+  background-color: var(--background);
+  color: var(--text);
   border-radius: fluid(10, 15);
   padding: fluid(15, 30);
   max-width: calc(100vw - #{fluid(30, 60)});
