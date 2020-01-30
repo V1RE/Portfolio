@@ -1,5 +1,5 @@
-@import "./variables";
 @import "./functions";
+@import "./variables";
 @import "./reset";
 @import "./types";
 @import "./card";
@@ -22,7 +22,7 @@ html {
   header {
     height: $headerHeight;
     position: fixed;
-    top: calc(-#{$headerHeight} - 6px);
+    top: calc(#{$headerHeight} * -1 - 6px);
     right: 0;
     left: 0;
     background-color: var(--muted);

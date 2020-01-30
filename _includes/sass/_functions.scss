@@ -1,3 +1,6 @@
+$display-wide: 1920;
+$display-narrow: 375;
+
 @function fluid($minValue, $maxValue) {
   $x: ($maxValue - $minValue)/ ($display-wide - $display-narrow);
   $y: $maxValue - $display-wide * $x;

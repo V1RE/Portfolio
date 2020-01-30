@@ -32,19 +32,16 @@ $background-gradient-linear: linear-gradient(
   var(--gradient-color-dark)
 );
 
-$headerHeight: 60px;
-
-$display-wide: 1920;
-$display-narrow: 375;
+$headerHeight: fluid(60, 100);
 
 @keyframes fadeInUp {
   0% {
     opacity: 0;
-    transform: translateY(50px);
+    top: 50px;
   }
 
   100% {
     opacity: 1;
-    transform: translateY(0);
+    top: 0;
   }
 }
