@@ -50,7 +50,12 @@
           }
 
           .content {
-            max-height: 150px;
+            max-height: calc(
+              #{fluid(24, 48)} * 2 + #{fluid(30, 45)} + #{fluid(5, 10)} + #{fluid(
+                  16,
+                  24
+                )} * 3
+            );
             overflow: hidden;
             transition: max-height ease 1s;
 
@@ -66,6 +71,13 @@
             .description {
               width: fluid(170, 300);
               font-size: fluid(16, 24);
+            }
+
+            .iconholder {
+              margin-top: fluid(24, 48);
+              display: flex;
+              justify-content: space-around;
+              align-items: center;
             }
           }
 

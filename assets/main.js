@@ -57,6 +57,7 @@ const closePicture = () => {
 };
 
 const initPage = () => {
+  feather.replace();
   setHeaderTop();
   parrallaxCard();
   setCuryear();
