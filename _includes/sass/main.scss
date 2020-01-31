@@ -32,26 +32,16 @@ html {
   header {
     height: $headerHeight;
     position: fixed;
-    top: calc(#{$headerHeight} * -1 - 6px);
+    top: 0;
     right: 0;
     left: 0;
     background-color: var(--muted);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    display: none;
-    transition: top 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
     z-index: 15;
     padding: 0 fluid(16, 24);
     justify-content: space-between;
     align-items: center;
-
-    &.show {
-      display: flex;
-      top: 0;
-    }
-
-    &.scrolling {
-      transition: none;
-    }
   }
 
   main {
@@ -63,6 +53,7 @@ html {
     // justify-content: center;
     align-items: center;
     padding: fluid(16, 24);
+    justify-self: flex-end;
 
     .copyright {
       color: var(--text);
