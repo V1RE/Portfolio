@@ -5,6 +5,10 @@ $(document).ready(() => {
     setHeaderTop();
     parrallaxCard();
   });
+
+  $("#intro .card .profilepicture").click(() => {
+    bigPicture();
+  });
 });
 
 const setHeaderTop = () => {
@@ -24,6 +28,7 @@ const setHeaderTop = () => {
       .addClass("show")
       .removeClass("scrolling")
       .css({ top: "" });
+    closePicture();
   } else {
     header.removeClass("show scrolling").css({ top: "" });
   }
@@ -36,7 +41,23 @@ const parrallaxCard = () => {
   introCard.css("transform", `translateY(${scrollTop * 0.3}px)`);
 };
 
+const setCuryear = () => {
+  let curyear = $("footer .curyear");
+  let curdate = new Date().getFullYear();
+
+  curyear.text(curdate);
+};
+
+const bigPicture = () => {
+  $("#intro .card").toggleClass("bigpicture");
+};
+
+const closePicture = () => {
+  $("#intro .card").removeClass("bigpicture");
+};
+
 const initPage = () => {
   setHeaderTop();
   parrallaxCard();
+  setCuryear();
 };

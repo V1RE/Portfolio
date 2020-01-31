@@ -1,7 +1,7 @@
 .card {
   background-color: var(--background);
   color: var(--text);
-  border-radius: fluid(10, 15);
+  border-radius: fluid(10, 16);
   padding: fluid(24, 48);
   max-width: calc(100vw - #{fluid(48, 96)});
   display: flex;

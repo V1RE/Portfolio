@@ -1,4 +1,30 @@
 h1 {
-  font-variation-settings: "wght" 800;
+  font-variation-settings: "wght" 700;
   font-size: fluid(30, 45);
+}
+
+* {
+  font-size: fluid(16, 24);
+}
+
+main {
+  a {
+    color: var(--primary);
+    text-decoration: none;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(
+      100deg,
+      var(--primary),
+      var(--secondary),
+      var(--primary)
+    );
+    background-size: 250% 100%;
+    background-position-x: 100%;
+    transition: background-position 0.25s;
+
+    &:hover {
+      background-position-x: 0%;
+    }
+  }
 }

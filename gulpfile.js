@@ -20,7 +20,13 @@ gulp.task("assets", () => {
     .pipe(gulp.dest("./dist"));
 });
 
-gulp.task("build", gulp.series("sassCompile", "feather", "assets"));
+gulp.task("jquery", () => {
+  return gulp
+    .src("./node_modules/jquery/dist/jquery.min.js")
+    .pipe(gulp.dest("./dist"));
+});
+
+gulp.task("build", gulp.series("sassCompile", "feather", "assets", "jquery"));
 
 gulp.task("default", function() {
   gulp.watch(

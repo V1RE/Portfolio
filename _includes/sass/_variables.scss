@@ -1,5 +1,6 @@
 :root {
   --primary: #0066ff;
+  --secondary: #4d94ff;
   --text: #fff;
   --background: #2f363d;
   --muted: #24292e;
@@ -10,9 +11,10 @@
 
   @media (prefers-color-scheme: light) {
     --primary: #0066ff;
+    --secondary: #4d94ff;
     --text: #2f363d;
     --background: #fff;
-    --muted: #f6f8fa;
+    --muted: #f1f3f4;
     --border: #d1d5da;
     --icon: #959da5;
     --gradient-color-light: #21d4fd;
@@ -33,6 +35,7 @@ $background-gradient-linear: linear-gradient(
 );
 
 $headerHeight: fluid(60, 100);
+$footerHeight: fluid(48, 64);
 
 @keyframes fadeInUp {
   0% {
