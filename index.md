@@ -4,4 +4,4 @@ pageid: home
 title: Home
 ---
 
-# Niels Mentink
+a web developer creating experiences that stick with people.
