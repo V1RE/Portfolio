@@ -17,17 +17,13 @@
 
     main {
       #intro {
-        background-image: url("/dot.svg"), $background-gradient;
+        background-image: url("/dot.svg"), $background-gradient-linear;
         background-position: center;
         background-attachment: fixed;
         display: flex;
         align-items: center;
         justify-content: center;
         overflow: hidden;
-
-        @media (prefers-color-scheme: light) {
-          background-image: url("/dot.svg"), $background-gradient-linear;
-        }
 
         .card {
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
@@ -123,6 +119,16 @@
       #projects {
         background-color: var(--muted);
         min-height: calc(100vh - #{$footerHeight});
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  #home {
+    main {
+      #intro {
+        background-image: url("/dot.svg"), $background-gradient;
       }
     }
   }
