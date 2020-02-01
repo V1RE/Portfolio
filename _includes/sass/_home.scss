@@ -1,20 +1,5 @@
 #home {
   .mainwrapper {
-    header {
-      top: calc(#{$headerHeight} * -1 - 6px);
-      display: none;
-      transition: top 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
-      &.show {
-        display: flex;
-        top: 0;
-      }
-
-      &.scrolling {
-        transition: none;
-      }
-    }
-
     main {
       #intro {
         background-image: url("/dot.svg"), $background-gradient-linear;
@@ -124,13 +109,12 @@
         }
       }
 
-      #projects {
+      #projectswrapper {
         background-color: var(--muted);
         min-height: calc(
           (100vh - #{$footerHeight}) - (#{$headerHeight} + #{fluid(24, 48)} * 2)
         );
-        padding: calc(#{$headerHeight} + #{fluid(24, 48)}) fluid(16, 24)
-          fluid(24, 48);
+        padding: fluid(24, 48) fluid(16, 24);
         display: flex;
         align-items: flex-start;
         justify-content: center;

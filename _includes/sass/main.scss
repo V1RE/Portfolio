@@ -37,6 +37,7 @@ html {
   flex-direction: column;
 
   main {
+    min-height: calc(100vh - #{$footerHeight});
   }
 
   footer {
