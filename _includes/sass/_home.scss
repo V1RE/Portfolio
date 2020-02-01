@@ -127,9 +127,10 @@
       #projects {
         background-color: var(--muted);
         min-height: calc(
-          (100vh - #{$footerHeight}) - (#{$headerHeight} + #{fluid(24, 48)}) * 2
+          (100vh - #{$footerHeight}) - (#{$headerHeight} + #{fluid(24, 48)} * 2)
         );
-        padding: calc(#{$headerHeight} + #{fluid(24, 48)}) fluid(16, 24);
+        padding: calc(#{$headerHeight} + #{fluid(24, 48)}) fluid(16, 24)
+          fluid(24, 48);
         display: flex;
         align-items: flex-start;
         justify-content: center;
