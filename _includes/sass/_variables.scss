@@ -53,10 +53,10 @@ $footerHeight: fluid(48, 64);
   0% {
     transform: translatey(0px);
   }
-  10% {
+  25% {
     transform: translatey(#{fluid(5, 10)});
   }
-  20% {
+  50% {
     transform: translatey(0px);
   }
 }
