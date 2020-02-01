@@ -35,6 +35,7 @@
           overflow: hidden;
           align-items: center;
           justify-content: center;
+          z-index: 2;
           background-image: linear-gradient(
             135deg,
             var(--muted),
@@ -113,6 +114,13 @@
               transition: max-height ease 1s;
             }
           }
+        }
+
+        .scrollicon {
+          position: absolute;
+          bottom: fluid(24, 48);
+          z-index: 1;
+          animation: float ease 3s infinite, scrollFadeIn linear 10s;
         }
       }
 
