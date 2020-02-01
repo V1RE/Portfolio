@@ -116,8 +116,20 @@
         );
         padding: fluid(24, 48) fluid(16, 24);
         display: flex;
+        flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
+
+        .projectintro {
+          margin-bottom: fluid(24, 48);
+
+          h2 {
+            .feather {
+              vertical-align: bottom;
+              margin-right: fluid(8, 12);
+            }
+          }
+        }
 
         .projectcontainer {
           margin: fluid(-8, -12);
@@ -126,12 +138,11 @@
           align-items: flex-start;
           justify-content: flex-start;
           flex-wrap: wrap;
+          width: calc(100% + #{fluid(16, 24)});
 
           .project {
             margin: fluid(8, 12);
-            min-width: 350px;
-            flex-shrink: 1;
-            width: 100%;
+            flex-grow: 1;
           }
         }
       }

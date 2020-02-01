@@ -45,10 +45,15 @@ layout: main
   </header>
 
   <section class="fullheight" id="projectswrapper">
+    <div class="projectintro">
+      <h2><i data-feather="folder"></i>Projects</h2>
+    </div>
     <div class="projectcontainer">
       {{#each collections.projects}}
-      <div class="card project">
-        <h2 class="projecttitle">{{this.data.title}}</h2>
+      <div class="project">
+        <div class="card">
+          <h3 class="projecttitle">{{this.data.title}}</h3>
+        </div>
       </div>
       {{/each}}
     </div>
