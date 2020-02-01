@@ -43,7 +43,13 @@ layout: main
   </section>
 
   <section class="fullheight" id="projects">
-
+    <div class="projectcontainer">
+      {{#each collections.projects}}
+      <div class="card project">
+        <h2 class="projecttitle">{{this.data.title}}</h2>
+      </div>
+      {{/each}}
+    </div>
   </section>
 </main>
 
