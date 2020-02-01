@@ -55,5 +55,71 @@
         }
       }
     }
+
+    .rightpart {
+      .menuitems {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        li {
+          margin-left: fluid(16, 24);
+
+          a {
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          #theme-switch {
+            height: fluid(24, 36);
+            width: fluid(24, 36);
+            cursor: pointer;
+            position: relative;
+            display: block;
+            overflow: hidden;
+
+            #checkbox_theme {
+              opacity: 0;
+            }
+
+            .feather {
+              position: absolute;
+              left: 0;
+              transition: top ease 0.5s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  header {
+    #theme-switch {
+      .darkthemeicon {
+        top: 0;
+      }
+
+      .lightthemeicon {
+        top: -100%;
+      }
+    }
+  }
+}
+
+[data-theme="light"] {
+  header {
+    #theme-switch {
+      .darkthemeicon {
+        top: 100%;
+      }
+
+      .lightthemeicon {
+        top: 0;
+      }
+    }
   }
 }
