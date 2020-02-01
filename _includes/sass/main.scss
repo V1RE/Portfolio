@@ -2,6 +2,7 @@
 @import "./variables";
 @import "./reset";
 @import "./types";
+@import "./header";
 @import "./card";
 @import "./home";
 
@@ -28,21 +29,6 @@ html {
 .mainwrapper {
   display: flex;
   flex-direction: column;
-
-  header {
-    height: $headerHeight;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: var(--muted);
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    display: flex;
-    z-index: 15;
-    padding: 0 fluid(16, 24);
-    justify-content: space-between;
-    align-items: center;
-  }
 
   main {
   }
