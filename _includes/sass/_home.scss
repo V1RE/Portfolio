@@ -21,6 +21,7 @@
           align-items: center;
           justify-content: center;
           z-index: 2;
+          padding: fluid(24, 48);
           background-image: linear-gradient(
             135deg,
             var(--muted),
@@ -143,6 +144,23 @@
           .project {
             margin: fluid(8, 12);
             flex-grow: 1;
+
+            .linkwrapper {
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              align-items: flex-start;
+
+              a {
+                margin-top: fluid(16, 32);
+
+                .feather {
+                  height: fluid(16, 24);
+                  width: fluid(16, 24);
+                  margin-right: fluid(8, 12);
+                }
+              }
+            }
           }
         }
       }

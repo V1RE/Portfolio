@@ -52,7 +52,22 @@ layout: main
       {{#each collections.projects}}
       <div class="project">
         <div class="card">
-          <h3 class="projecttitle">{{this.data.title}}</h3>
+          <a href="{{this.url}}">
+            <h3 class="projecttitle">{{this.data.title}}</h3>
+          </a>
+
+          <p class="content">
+            {{{this.data.description}}}
+          </p>
+
+          <div class="linkwrapper">
+            {{#if this.data.demo}}
+            <a href="{{this.data.demo}}" target="_blank"><i data-feather="globe"></i></a>
+            {{/if}}
+            {{#if this.data.code}}
+            <a href="{{this.data.code}}" target="_blank"><i data-feather="code"></i></a>
+            {{/if}}
+          </div>
         </div>
       </div>
       {{/each}}
