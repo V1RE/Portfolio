@@ -1,4 +1,5 @@
 {
   "tags": ["projects"],
-  "layout": "page"
+  "layout": "page",
+  "icon": "folder"
 }

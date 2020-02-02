@@ -33,12 +33,18 @@ layout: main
       <div class="project">
         <article class="card">
           <a href="{{this.url}}">
-            <h3 class="projecttitle">{{this.data.title}}</h3>
-          </a>
+            {{#if this.data.image}}
+            <div class="projectimg" style="background-image: url({{this.data.image}});"></div>
+            {{/if}}
 
-          <p class="content">
-            {{{this.data.description}}}
-          </p>
+            <h3 class="projecttitle">{{this.data.title}}</h3>
+
+            <p class="description">
+              {{{this.data.description}}}
+            </p>
+
+            <p class="readmore">Read more<i data-feather="arrow-right"></i></p>
+          </a>
 
           <div class="linkwrapper">
             {{#if this.data.demo}}
