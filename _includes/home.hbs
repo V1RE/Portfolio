@@ -2,28 +2,6 @@
 layout: main
 ---
 
-<header>
-  <div class="leftpart">
-    <a href="/">
-      <span class="logo">Niels<br>Mentink</span>
-      <div class="line"></div>
-    </a>
-  </div>
-  <nav class="rightpart">
-    <ul class="menuitems">
-      <li><a href="/#projects">Projects</a></li>
-      <li><a href="/contact">Contact</a></li>
-      <li>
-        <label id="theme-switch" class="theme-switch" for="checkbox_theme">
-          <input type="checkbox" id="checkbox_theme">
-          <i data-feather="moon" class="lightthemeicon"></i>
-          <i data-feather="sun" class="darkthemeicon"></i>
-        </label>
-      </li>
-    </ul>
-  </nav>
-</header>
-
 <main>
   <section class="fullheight" id="intro">
     <div class="card">
@@ -42,11 +20,55 @@ layout: main
     <a href="#projects" class="scrollicon"><i data-feather="chevron-down"></i></a>
   </section>
 
-  <section class="fullheight" id="projects">
+  <div id="projects" class="scrollanchor"></div>
+
+  <header>
+    <div class="leftpart">
+      <a href="/">
+        <span class="logo">Niels<br>Mentink</span>
+        <div class="line"></div>
+      </a>
+    </div>
+    <nav class="rightpart">
+      <ul class="menuitems">
+        <li><a href="/#projects">Projects</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li>
+          <label id="theme-switch" class="theme-switch" for="checkbox_theme">
+            <input type="checkbox" id="checkbox_theme">
+            <i data-feather="moon" class="lightthemeicon"></i>
+            <i data-feather="sun" class="darkthemeicon"></i>
+          </label>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="fullheight" id="projectswrapper">
+    <div class="projectintro">
+      <h2><i data-feather="folder"></i>Projects</h2>
+    </div>
     <div class="projectcontainer">
       {{#each collections.projects}}
-      <div class="card project">
-        <h2 class="projecttitle">{{this.data.title}}</h2>
+      <div class="project">
+        <div class="card">
+          <a href="{{this.url}}">
+            <h3 class="projecttitle">{{this.data.title}}</h3>
+          </a>
+
+          <p class="content">
+            {{{this.data.description}}}
+          </p>
+
+          <div class="linkwrapper">
+            {{#if this.data.demo}}
+            <a href="{{this.data.demo}}" target="_blank"><i data-feather="globe"></i></a>
+            {{/if}}
+            {{#if this.data.code}}
+            <a href="{{this.data.code}}" target="_blank"><i data-feather="code"></i></a>
+            {{/if}}
+          </div>
+        </div>
       </div>
       {{/each}}
     </div>

@@ -37,12 +37,11 @@ html {
   flex-direction: column;
 
   main {
+    min-height: calc(100vh - #{$footerHeight});
   }
 
   footer {
-    // scroll-snap-align: end;
     display: flex;
-    // justify-content: center;
     align-items: center;
     padding: fluid(16, 24);
     justify-self: flex-end;

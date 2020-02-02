@@ -3,28 +3,40 @@ h1 {
   font-size: fluid(30, 45);
 }
 
+h2 {
+  font-variation-settings: "wght" 650;
+  font-size: fluid(25, 40);
+}
+
+h3 {
+  font-variation-settings: "wght" 600;
+  font-size: fluid(20, 35);
+}
+
 * {
   font-size: fluid(16, 24);
 }
 
 main {
-  a {
-    color: var(--primary);
-    text-decoration: none;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-image: -webkit-linear-gradient(
-      100deg,
-      var(--primary),
-      var(--secondary),
-      var(--primary)
-    );
-    background-size: 250% 100%;
-    background-position-x: 100%;
-    transition: background-position 0.25s;
+  .content {
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-image: -webkit-linear-gradient(
+        100deg,
+        var(--primary),
+        var(--secondary),
+        var(--primary)
+      );
+      background-size: 250% 100%;
+      background-position-x: 100%;
+      transition: background-position 0.25s;
 
-    &:hover {
-      background-position-x: 0%;
+      &:hover {
+        background-position-x: 0%;
+      }
     }
   }
 }

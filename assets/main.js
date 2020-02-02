@@ -2,7 +2,6 @@ $(document).ready(() => {
   initPage();
 
   $(window).scroll(() => {
-    setHeaderTop();
     parrallaxCard();
   });
 
@@ -14,29 +13,6 @@ $(document).ready(() => {
     switchTheme(e);
   });
 });
-
-const setHeaderTop = () => {
-  let header = $("#home header");
-  let headerHeight = header.height() + 6;
-  let introHeight = $("#intro").height();
-  let scrollTop = $(window).scrollTop();
-  let headerTop = scrollTop - (introHeight - headerHeight);
-
-  if (
-    scrollTop >= introHeight - headerHeight * 2 &&
-    scrollTop <= introHeight - headerHeight
-  ) {
-    header.addClass("show scrolling").css({ top: headerTop });
-  } else if (scrollTop >= introHeight - headerHeight * 2) {
-    header
-      .addClass("show")
-      .removeClass("scrolling")
-      .css({ top: "" });
-    closePicture();
-  } else {
-    header.removeClass("show scrolling").css({ top: "" });
-  }
-};
 
 const parrallaxCard = () => {
   let introCard = $("#home #intro .card");
@@ -61,9 +37,8 @@ const closePicture = () => {
 };
 
 const detectTheme = () => {
-  let theme = "light"; //default to light
+  let theme = "light";
 
-  //local storage is used to override OS theme settings
   if (localStorage.getItem("theme")) {
     if (localStorage.getItem("theme") == "dark") {
       theme = "dark";
@@ -104,7 +79,6 @@ const toggleSwitch = $("#checkbox_theme");
 const initPage = () => {
   feather.replace();
   detectTheme();
-  setHeaderTop();
   parrallaxCard();
   setCuryear();
 };
