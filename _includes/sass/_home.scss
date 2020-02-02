@@ -9,6 +9,7 @@
         align-items: center;
         justify-content: center;
         overflow: hidden;
+        padding: 0;
 
         .card {
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
@@ -42,6 +43,7 @@
             background-repeat: no-repeat;
             border-radius: 100%;
             margin-bottom: fluid(24, 48);
+            margin-right: 0;
             align-self: center;
             transition: height ease 1s, width ease 1s, margin ease 1s,
               border-radius ease 1s;
@@ -98,6 +100,15 @@
             .content {
               max-height: 0;
               transition: max-height ease 1s;
+            }
+          }
+
+          @media (max-height: 500px) {
+            flex-direction: row;
+
+            .profilepicture {
+              margin-bottom: 0;
+              margin-right: fluid(24, 48);
             }
           }
         }
