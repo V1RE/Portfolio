@@ -1,5 +1,6 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass");
+const del = require("del");
 
 gulp.task("sassCompile", function() {
   return gulp
@@ -26,7 +27,13 @@ gulp.task("jquery", () => {
     .pipe(gulp.dest("./dist"));
 });
 
+gulp.task("del", () => {
+  return del("dist/**", { force: true });
+});
+
 gulp.task("build", gulp.series("sassCompile", "feather", "assets", "jquery"));
+
+gulp.task("clean", gulp.series("del", "build"));
 
 gulp.task("default", function() {
   gulp.watch(
