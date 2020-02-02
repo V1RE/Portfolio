@@ -36,6 +36,7 @@ $background-gradient-linear: linear-gradient(
 
 $headerHeight: fluid(60, 100);
 $footerHeight: fluid(48, 64);
+$transition: cubic-bezier(0.25, 0.8, 0.25, 1);
 
 @keyframes fadeInUp {
   0% {

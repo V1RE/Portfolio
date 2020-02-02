@@ -7,11 +7,12 @@
     left: 0;
     background-color: var(--muted);
     display: flex;
-    transition: top 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition: top 0.3s $transition;
     z-index: 15;
     padding: 0 fluid(16, 24);
     justify-content: space-between;
     align-items: center;
+    width: calc(100% - #{fluid(32, 48)});
 
     .leftpart {
       a {
@@ -31,14 +32,14 @@
           width: 100%;
           top: calc(100% - 2px);
           background-color: var(--primary);
-          transition: top ease 0.3s 0.4s, bottom ease 0.3s;
+          transition: top 0.3s $transition 0.3s, bottom 0.3s $transition;
         }
 
         &:hover {
           .line {
             top: -2px;
             bottom: 100%;
-            transition: top ease 0.3s, bottom ease 0.3s 0.4s;
+            transition: top 0.3s $transition, bottom 0.3s $transition 0.3s;
           }
         }
       }
@@ -75,7 +76,7 @@
             .feather {
               position: absolute;
               left: 0;
-              transition: top ease 0.5s;
+              transition: top 0.3s $transition;
             }
           }
         }

@@ -1,6 +1,12 @@
 h1 {
   font-variation-settings: "wght" 700;
   font-size: fluid(30, 45);
+  margin-bottom: fluid(24, 48);
+
+  .feather {
+    vertical-align: baseline;
+    margin-right: fluid(8, 12);
+  }
 }
 
 h2 {
@@ -37,6 +43,35 @@ main {
       &:hover {
         background-position-x: 0%;
       }
+    }
+
+    p,
+    pre {
+      margin-bottom: fluid(16, 24);
+    }
+
+    pre {
+      background-color: var(--background);
+      padding: fluid(8, 16);
+      font-family: "Roboto Mono", monospace;
+      tab-size: 2;
+      line-height: 1.3;
+      border-radius: fluid(10, 16);
+      overflow-x: auto;
+    }
+
+    img,
+    canvas,
+    iframe,
+    video,
+    svg,
+    select,
+    textarea {
+      max-width: 100%;
+    }
+
+    :last-child {
+      margin-bottom: 0;
     }
   }
 }

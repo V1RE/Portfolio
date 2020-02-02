@@ -10,12 +10,13 @@
         justify-content: center;
         overflow: hidden;
         padding: 0;
+        max-width: 100%;
+        width: 100%;
 
         .card {
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12),
             0 1px 2px rgba(0, 0, 0, 0.24);
-          transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
-            padding ease 1s;
+          transition: box-shadow 0.3s $transition, padding $transition 1s;
           animation: fadeInUp 1s cubic-bezier(0, 0, 0.2, 1);
           position: relative;
           overflow: hidden;
@@ -45,8 +46,30 @@
             margin-bottom: fluid(24, 48);
             margin-right: 0;
             align-self: center;
-            transition: height ease 1s, width ease 1s, margin ease 1s,
-              border-radius ease 1s;
+            cursor: pointer;
+            transition: height $transition 1s, width $transition 1s,
+              margin $transition 1s, border-radius $transition 1s;
+          }
+
+          @media (max-height: 500px) {
+            flex-direction: row;
+
+            &.bigpicture {
+              .content {
+                max-width: 0;
+                max-height: calc(
+                  #{fluid(24, 48)} * 2 + #{fluid(30, 45)} + #{fluid(5, 10)} + #{fluid(
+                      16,
+                      24
+                    )} * 3
+                ) !important;
+              }
+            }
+
+            .profilepicture {
+              margin-bottom: 0;
+              margin-right: fluid(24, 48);
+            }
           }
 
           .content {
@@ -56,8 +79,9 @@
                   24
                 )} * 3
             );
+            max-width: 100%;
             overflow: hidden;
-            transition: max-height ease 1s;
+            transition: max-height $transition 1s, max-width $transition 1s;
 
             .greeting {
               margin-bottom: fluid(5, 10);
@@ -86,29 +110,20 @@
             border-radius: 0;
             box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
               0 10px 10px rgba(0, 0, 0, 0.22);
-            transition: padding ease 1s, border-radius ease 1s;
+            transition: padding $transition 1s, border-radius $transition 1s;
 
             .profilepicture {
               height: 80vmin;
               width: 80vmin;
               margin: 0;
               border-radius: fluid(10, 16);
-              transition: height ease 1s, width ease 1s, margin ease 1s,
-                border-radius ease 1s;
+              transition: height $transition 1s, width $transition 1s,
+                margin $transition 1s, border-radius $transition 1s;
             }
 
             .content {
               max-height: 0;
-              transition: max-height ease 1s;
-            }
-          }
-
-          @media (max-height: 500px) {
-            flex-direction: row;
-
-            .profilepicture {
-              margin-bottom: 0;
-              margin-right: fluid(24, 48);
+              transition: max-height $transition 1s, max-width $transition 1s;
             }
           }
         }
@@ -118,6 +133,10 @@
           bottom: fluid(24, 48);
           z-index: 1;
           animation: float ease 3s infinite, scrollFadeIn linear 10s;
+
+          .feather {
+            color: #fff;
+          }
         }
       }
 
@@ -155,7 +174,45 @@
             margin: fluid(8, 12);
             flex-grow: 1;
 
-            .content {
+            a:hover {
+              .projectimg {
+                background-size: 110% 110%;
+              }
+
+              .readmore {
+                .feather {
+                  opacity: 1;
+                  margin-left: fluid(4, 6);
+                }
+              }
+            }
+
+            .projectimg {
+              margin: fluid(-16, -32) fluid(-16, -32) fluid(16, 32);
+              height: 200px;
+              border-radius: fluid(10, 16) fluid(10, 16) 0 0;
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+              transition: background-size 0.3s $transition;
+            }
+
+            .description {
+              color: var(--icon);
+              margin-top: fluid(4, 8);
+            }
+
+            .readmore {
+              margin-top: fluid(8, 16);
+
+              .feather {
+                height: fluid(16, 24);
+                width: fluid(16, 24);
+                vertical-align: top;
+                opacity: 0;
+                transition: opacity 0.3s $transition, margin 0.3s $transition;
+                margin-left: fluid(-8, -12);
+              }
             }
 
             .linkwrapper {

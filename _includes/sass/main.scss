@@ -12,7 +12,7 @@ html {
 
   &.transition {
     * {
-      transition: all ease 0.3s !important;
+      transition: all 0.3s $transition !important;
     }
   }
 }
@@ -25,7 +25,7 @@ html {
   color: var(--icon);
   height: fluid(24, 36);
   width: fluid(24, 36);
-  transition: color 0.5s;
+  transition: color 0.3s $transition;
 
   &:hover {
     color: var(--text);
@@ -38,9 +38,15 @@ html {
 
   main {
     min-height: calc(100vh - #{$footerHeight} - #{$headerHeight});
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
     section {
       padding: fluid(24, 48) fluid(16, 24);
+      width: calc(100% - #{fluid(32, 48)});
+      max-width: fluid(700, 1000);
     }
   }
 
@@ -49,6 +55,7 @@ html {
     align-items: center;
     padding: fluid(16, 24);
     justify-self: flex-end;
+    width: calc(100% - #{fluid(32, 48)});
 
     .copyright {
       color: var(--text);

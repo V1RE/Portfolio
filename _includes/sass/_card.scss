@@ -6,4 +6,10 @@
   max-width: calc(100vw - #{fluid(48, 96)});
   display: flex;
   flex-direction: column;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0.12), 0 0 0 rgba(0, 0, 0, 0.24);
+  transition: box-shadow 0.3s $transition;
+
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
 }
