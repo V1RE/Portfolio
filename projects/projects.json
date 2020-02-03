@@ -1,5 +1,6 @@
 {
   "tags": ["projects"],
-  "layout": "page",
-  "icon": "folder"
+  "layout": "project",
+  "icon": "folder",
+  "pageid": "project"
 }

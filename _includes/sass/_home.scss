@@ -82,6 +82,7 @@
             max-width: 100%;
             overflow: hidden;
             transition: max-height $transition 1s, max-width $transition 1s;
+            line-height: 1;
 
             .greeting {
               margin-bottom: fluid(5, 10);
@@ -95,6 +96,7 @@
             .description {
               width: fluid(170, 300);
               font-size: fluid(16, 24);
+              min-height: unset;
             }
 
             .iconholder {
@@ -173,12 +175,14 @@
           .project {
             margin: fluid(8, 12);
             flex-grow: 1;
+            width: 100%;
+            max-width: calc(100% + #{fluid(-16, -24)});
+
+            @media (min-width: 48em) {
+              max-width: calc(50% + #{fluid(-16, -24)});
+            }
 
             a:hover {
-              .projectimg {
-                background-size: 110% 110%;
-              }
-
               .readmore {
                 .feather {
                   opacity: 1;
@@ -200,6 +204,11 @@
             .description {
               color: var(--icon);
               margin-top: fluid(4, 8);
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 3;
             }
 
             .readmore {
