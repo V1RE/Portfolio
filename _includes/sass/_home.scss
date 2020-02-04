@@ -193,12 +193,13 @@
 
             .projectimg {
               margin: fluid(-16, -32) fluid(-16, -32) fluid(16, 32);
-              height: 200px;
+              height: fluid(200, 300);
               border-radius: fluid(10, 16) fluid(10, 16) 0 0;
               background-size: cover;
-              background-position: center;
+              background-position: top center;
               background-repeat: no-repeat;
               transition: background-size 0.3s $transition;
+              box-shadow: inset 0 0 0 1px var(--border);
             }
 
             .description {

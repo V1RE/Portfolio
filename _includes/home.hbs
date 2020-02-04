@@ -30,7 +30,7 @@ layout: main
     </div>
     <div class="projectcontainer">
       {{#each collections.projects}}
-      <div class="project">
+      <div class="project" style="order: {{this.data.order}};">
         <article class="card">
           <a href="{{this.url}}">
             {{#if this.data.image}}
@@ -48,7 +48,7 @@ layout: main
 
           <div class="linkwrapper">
             {{#if this.data.demo}}
-            <a href="{{this.data.demo}}" title="Demo" target="_blank"><i data-feather="globe"></i></a>
+            <a href="{{this.data.demo}}" title="Demo" target="_blank"><i data-feather="external-link"></i></a>
             {{/if}}
             {{#if this.data.code}}
             <a href="{{this.data.code}}" title="Code" target="_blank"><i data-feather="code"></i></a>
