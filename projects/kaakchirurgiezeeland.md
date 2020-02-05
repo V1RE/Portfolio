@@ -9,6 +9,7 @@ uses:
   - jquery
   - bootstrap
   - mdi
+  - figma
 ---
 
 Not only did the old website look outdated, the client also couldn't change any of the text on the website.
