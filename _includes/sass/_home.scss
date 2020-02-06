@@ -229,16 +229,42 @@
             .linkwrapper {
               display: flex;
               flex-direction: row;
-              justify-content: flex-start;
+              justify-content: space-between;
               align-items: flex-start;
 
-              a {
-                margin-top: fluid(16, 32);
+              .left {
+                display: flex;
 
-                .feather {
-                  height: fluid(16, 24);
+                a {
+                  margin-top: fluid(16, 32);
+
+                  .feather {
+                    height: fluid(16, 24);
+                    width: fluid(16, 24);
+                    margin-right: fluid(8, 12);
+                  }
+                }
+              }
+
+              .right {
+                display: flex;
+
+                .bgicon {
                   width: fluid(16, 24);
-                  margin-right: fluid(8, 12);
+                  height: fluid(16, 24);
+                  margin-left: fluid(8, 12);
+                  margin-top: fluid(16, 32);
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  filter: brightness(0) saturate(100%) invert(65%) sepia(20%)
+                    saturate(145%) hue-rotate(169deg) brightness(93%)
+                    contrast(84%);
+                  transition: filter $transition 0.3s;
+
+                  &:hover {
+                    filter: none;
+                  }
                 }
               }
             }
