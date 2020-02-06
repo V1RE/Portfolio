@@ -86,6 +86,7 @@
 
             .greeting {
               margin-bottom: fluid(5, 10);
+              display: block;
 
               .name {
                 text-decoration: underline var(--primary);
