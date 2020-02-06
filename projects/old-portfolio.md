@@ -6,7 +6,8 @@ description: My original portfolio was made using Vue.js, which was far from nee
 image: /images/old-portfolio.png
 order: 90
 uses:
-  - netlify
-  - vue.js
-  - mdi
+  - Netlify
+  - Vue.js
+  - Material Design Icons
+  - NuxtJS
 ---
