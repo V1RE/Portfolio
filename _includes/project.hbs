@@ -22,7 +22,7 @@ layout: page
       </div>
       <div class="right">
         {{#each uses}}
-        <div class="bgicon" title="{{this}}" style="background-image: url(/icons/{{this}}.svg);"></div>
+        <div class="bgicon" title="{{this}}" style="background-image: url('/icons/{{this}}.svg');"></div>
         {{/each}}
       </div>
     </div>
@@ -30,3 +30,15 @@ layout: page
 </div>
 
 {{{ content }}}
+
+<div class="techcontainer">
+  <h3 class="techtitle">Technologies used:</h3>
+  <ul class="techstack">
+    {{#each uses}}
+    <li>
+      <div class="bgicon" title="{{this}}" style="background-image: url('/icons/{{this}}.svg');"></div>
+      {{this}}
+    </li>
+    {{/each}}
+  </ul>
+</div>

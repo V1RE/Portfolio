@@ -47,12 +47,19 @@ layout: main
           </a>
 
           <div class="linkwrapper">
-            {{#if this.data.demo}}
-            <a href="{{this.data.demo}}" title="Demo" target="_blank"><i data-feather="external-link"></i></a>
-            {{/if}}
-            {{#if this.data.code}}
-            <a href="{{this.data.code}}" title="Code" target="_blank"><i data-feather="code"></i></a>
-            {{/if}}
+            <div class="left">
+              {{#if this.data.demo}}
+              <a href="{{this.data.demo}}" title="Demo" target="_blank"><i data-feather="external-link"></i></a>
+              {{/if}}
+              {{#if this.data.code}}
+              <a href="{{this.data.code}}" title="Code" target="_blank"><i data-feather="code"></i></a>
+              {{/if}}
+            </div>
+            <div class="right">
+              {{#each this.data.uses}}
+              <div class="bgicon" title="{{this}}" style="background-image: url('/icons/{{this}}.svg');"></div>
+              {{/each}}
+            </div>
           </div>
         </article>
       </div>

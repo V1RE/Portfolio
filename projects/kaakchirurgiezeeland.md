@@ -5,11 +5,11 @@ demo: https://kaakchirurgiezeeland.nl
 image: /images/kaakchirurgiezeeland.png
 order: -1
 uses:
-  - wordpress
-  - jquery
-  - bootstrap
-  - mdi
-  - figma
+  - Wordpress
+  - jQuery
+  - Bootstrap
+  - Material Design Icons
+  - Figma
 ---
 
 Not only did the old website look outdated, the client also couldn't change any of the text on the website.
