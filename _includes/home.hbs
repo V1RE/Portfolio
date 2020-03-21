@@ -35,6 +35,10 @@ layout: main
           <a href="{{this.url}}">
             {{#if this.data.image}}
             <div class="projectimg" style="background-image: url({{this.data.image}});"></div>
+            {{else if this.data.demo}}
+            <div class="projectimg"
+              style="background-image: url(https://api.apiflash.com/v1/urltoimage?access_key=141b10f08f0e40bc8207724fedac44a7&width=1320&height=850&url={{this.data.demo}});">
+            </div>
             {{/if}}
 
             <h3 class="projecttitle">{{this.data.title}}</h3>
