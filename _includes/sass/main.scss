@@ -1,0 +1,68 @@
+@import "./functions";
+@import "./variables";
+@import "./reset";
+@import "./types";
+@import "./header";
+@import "./card";
+@import "./home";
+@import "./project";
+@import "./contact";
+
+html {
+  scroll-behavior: smooth;
+  // scroll-snap-type: y proximity;
+
+  &.transition {
+    * {
+      transition: all 0.3s $transition !important;
+    }
+  }
+}
+
+.fullheight {
+  min-height: 100vh;
+}
+
+.feather {
+  color: var(--icon);
+  height: fluid(24, 36);
+  width: fluid(24, 36);
+  transition: color 0.3s $transition;
+
+  &:hover {
+    color: var(--text);
+  }
+}
+
+.mainwrapper {
+  display: flex;
+  flex-direction: column;
+
+  main {
+    min-height: calc(100vh - #{$footerHeight} - #{$headerHeight});
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    section {
+      padding: fluid(24, 48) fluid(16, 24);
+      width: calc(100% - #{fluid(32, 48)});
+      max-width: fluid(700, 1000);
+    }
+  }
+
+  footer {
+    display: flex;
+    align-items: center;
+    padding: fluid(16, 24);
+    justify-self: flex-end;
+    width: calc(100% - #{fluid(32, 48)});
+
+    .copyright {
+      color: var(--text);
+      text-decoration: none;
+      font-variation-settings: "wght" 400;
+    }
+  }
+}

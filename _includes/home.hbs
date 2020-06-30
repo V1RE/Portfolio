@@ -1,0 +1,71 @@
+---
+layout: main
+---
+
+<main>
+  <section class="fullheight" id="intro">
+    <div class="card">
+      <div class="profilepicture"></div>
+      <div class="content">
+        <h1 class="greeting">Hi! I'm <span class="name">Niels</span>,</h1>
+        <div class="description">{{{content}}}</div>
+        <div class="iconholder">
+          <a href="mailto:niels.mentink@gmail.com" title="E-mail" target="_blank"><i data-feather="mail"></i></a>
+          <a href="https://wa.me/31627035882" title="Whatsapp" target="_blank"><i data-feather="message-square"></i></a>
+          <a href="https://github.com/V1RE/" title="Github" target="_blank"><i data-feather="github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <a href="#projects" class="scrollicon"><i data-feather="chevron-down"></i></a>
+  </section>
+
+  <div id="projects" class="scrollanchor"></div>
+
+  {{> partials/header }}
+
+  <section class="fullheight" id="projectswrapper">
+    <div class="projectintro">
+      <h2><i data-feather="folder"></i>Projects</h2>
+    </div>
+    <div class="projectcontainer">
+      {{#each collections.projects}}
+      <div class="project" style="order: {{this.data.order}};">
+        <article class="card">
+          <a href="{{this.url}}">
+            {{#if this.data.image}}
+            <div class="projectimg" style="background-image: url({{this.data.image}});"></div>
+            {{/if}}
+
+            <h3 class="projecttitle">{{this.data.title}}</h3>
+
+            <p class="description">
+              {{{this.data.description}}}
+            </p>
+
+            <p class="readmore">Read more<i data-feather="arrow-right"></i></p>
+          </a>
+
+          <div class="linkwrapper">
+            <div class="left">
+              {{#if this.data.demo}}
+              <a href="{{this.data.demo}}" title="Demo" target="_blank"><i data-feather="external-link"></i></a>
+              {{/if}}
+              {{#if this.data.code}}
+              <a href="{{this.data.code}}" title="Code" target="_blank"><i data-feather="code"></i></a>
+              {{/if}}
+            </div>
+            <div class="right">
+              {{#each this.data.uses}}
+              <div class="bgicon" title="{{this}}" style="background-image: url('/icons/{{this}}.svg');"></div>
+              {{/each}}
+            </div>
+          </div>
+        </article>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+</main>
+
+{{> partials/footer }}

@@ -1,50 +1,31 @@
 {
-  "name": "ment.ink",
-  "version": "0.1.0",
-  "private": true,
+  "name": "portfolio",
+  "version": "2.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "publish-now": "now"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy && gulp build",
+    "dev": "netlify dev & gulp"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/V1RE/Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/V1RE/Portfolio/issues"
+  },
+  "homepage": "https://niels.ment.ink",
   "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.9.0",
-    "@vue/cli-plugin-eslint": "^3.9.0",
-    "@vue/cli-service": "^3.9.0",
-    "@vue/eslint-config-standard": "^4.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.9.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "@vue/standard"
-    ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+    "@11ty/eleventy": "^0.10.0",
+    "del": "^5.1.0",
+    "feather-icons": "^4.25.0",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "jquery": "^3.4.1",
+    "netlify-cli": "^2.30.0"
+  }
 }

@@ -1,0 +1,116 @@
+.mainwrapper {
+  header {
+    height: $headerHeight;
+    position: sticky;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--muted);
+    display: flex;
+    transition: top 0.3s $transition;
+    z-index: 15;
+    padding: 0 fluid(16, 24);
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - #{fluid(32, 48)});
+
+    .leftpart {
+      a {
+        text-decoration: none;
+        position: relative;
+
+        .logo {
+          font-family: "Roboto Mono", monospace;
+          color: var(--text);
+          font-size: fluid(16, 24);
+        }
+
+        .line {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          top: calc(100% - 2px);
+          background-color: var(--primary);
+          transition: top 0.3s $transition 0.3s, bottom 0.3s $transition;
+        }
+
+        &:hover {
+          .line {
+            top: -2px;
+            bottom: 100%;
+            transition: top 0.3s $transition, bottom 0.3s $transition 0.3s;
+          }
+        }
+      }
+    }
+
+    .rightpart {
+      .menuitems {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+
+        li {
+          margin-left: fluid(16, 24);
+
+          a {
+            font-size: fluid(16, 24);
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          #theme-switch {
+            height: fluid(24, 36);
+            width: fluid(24, 36);
+            cursor: pointer;
+            position: relative;
+            display: block;
+            overflow: hidden;
+
+            #checkbox_theme {
+              opacity: 0;
+            }
+
+            .feather {
+              position: absolute;
+              left: 0;
+              transition: top 0.3s $transition;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+[data-theme="dark"] {
+  header {
+    #theme-switch {
+      .darkthemeicon {
+        top: 0;
+      }
+
+      .lightthemeicon {
+        top: -100%;
+      }
+    }
+  }
+}
+
+[data-theme="light"] {
+  header {
+    #theme-switch {
+      .darkthemeicon {
+        top: 100%;
+      }
+
+      .lightthemeicon {
+        top: 0;
+      }
+    }
+  }
+}
