@@ -5,7 +5,6 @@
 [dev]
   command = "eleventy --serve"
   port = 8888
-  targetPort = 8080
   publish = "dist"
 
 [[redirects]]
