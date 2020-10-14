@@ -6,9 +6,6 @@
         <InfoCard></InfoCard>
       </MaterialCard>
     </FullOpener>
-    <!-- <main>
-      <div class="safa">woppa</div>
-    </main>-->
   </div>
 </template>
 
