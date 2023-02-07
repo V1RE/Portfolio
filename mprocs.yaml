@@ -1,3 +1,7 @@
 procs:
-  "Dev Server":
-    shell: "turbo dev"
+  'Dev Server':
+    shell: 'pnpm dev'
+
+  'Linting':
+    shell: 'pnpm lint'
+    autostart: false

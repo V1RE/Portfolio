@@ -1,18 +1,17 @@
-import './globals.css'
+import './app.css';
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
+    <html
+      lang="en"
+      className="bg-white text-black dark:bg-black dark:text-white"
+    >
       <head />
       <body>{children}</body>
     </html>
-  )
+  );
 }

@@ -1,0 +1,22 @@
+{
+  "name": "tailwind-config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "tsup index.ts --dts --clean --format cjs,esm",
+    "dev": "tsup index.ts --watch --dts --clean --format cjs,esm"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.2.4",
+    "tsconfig": "workspace:*",
+    "tsup": "^6.5.0"
+  }
+}
