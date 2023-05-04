@@ -1,3 +1,0 @@
-procs:
-  "Dev Server":
-    shell: "turbo dev"
