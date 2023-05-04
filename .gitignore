@@ -1,0 +1,35 @@
+# dependencies
+node_modules
+.pnp
+.pnp.js
+package-lock.json
+yarn.lock
+
+# tsup
+dist/
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# local env files
+.env
+.env*.local
+
+# turbo
+.turbo
+
+# vercel cli
+.vercel
+
+# next.js
+.next/
+out/
+build
+next-env.d.ts
