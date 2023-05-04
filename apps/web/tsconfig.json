@@ -1,6 +1,13 @@
 {
   "extends": "@2digits/tsconfig/tsconfig.json",
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "next.config.mjs", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "next.config.mjs",
+    ".next/types/**/*.ts",
+    "postcss.config.js"
+  ],
   "compilerOptions": {
     "incremental": true,
     "baseUrl": "./src",
@@ -11,6 +18,9 @@
         "name": "next"
       }
     ],
+    "paths": {
+      "@/*": ["./src/*"]
+    },
     "moduleResolution": "node",
     "declaration": false,
     "declarationMap": false
