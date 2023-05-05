@@ -19,6 +19,7 @@ const config = resolveConfig({
       },
     },
   },
+  darkMode: 'class',
   plugins: [],
 });
 
