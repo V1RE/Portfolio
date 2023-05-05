@@ -1,7 +1,7 @@
 {
   "globalDependencies": ["**/.env", "tsconfig.json"],
   "pipeline": {
-    "build": { "dependsOn": ["^build"] },
+    "build": { "dependsOn": ["^build"], "outputs": ["dist/**", "build/**"] },
     "dev": { "cache": false, "persistent": true },
     "lint": { "cache": false },
     "lint-fix": { "cache": false },
