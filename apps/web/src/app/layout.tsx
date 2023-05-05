@@ -16,7 +16,7 @@ export const metadata = {
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" className={cx(manrope.variable, robotoMono.variable, 'antialiased')}>
-      <body className="grid min-h-screen grid-cols-1 grid-rows-[auto_1fr_auto] bg-gray-50 dark:bg-gray-800">
+      <body className="grid min-h-screen grid-cols-1 grid-rows-[auto_1fr_auto] bg-white dark:bg-gray-800">
         {children}
       </body>
     </html>

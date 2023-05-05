@@ -1,4 +1,4 @@
-import Header from 'components/Header';
+import Header from './header';
 import type { PropsWithChildren } from 'react';
 
 export default function MainLayout({ children }: PropsWithChildren) {
@@ -6,7 +6,7 @@ export default function MainLayout({ children }: PropsWithChildren) {
     <>
       <Header />
 
-      <main>{children}</main>
+      <main className="container py-10">{children}</main>
 
       <footer>Footer</footer>
     </>
