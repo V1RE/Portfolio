@@ -24,7 +24,7 @@
     "del": "^5.1.0",
     "feather-icons": "^4.25.0",
     "gulp": "^4.0.2",
-    "gulp-sass": "^4.0.2",
+    "gulp-sass": "^5.0.0",
     "jquery": "^3.4.1",
     "netlify-cli": "^2.30.0"
   }
