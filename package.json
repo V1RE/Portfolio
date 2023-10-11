@@ -26,6 +26,6 @@
     "gulp": "^4.0.2",
     "gulp-sass": "^4.0.2",
     "jquery": "^3.4.1",
-    "netlify-cli": "^2.30.0"
+    "netlify-cli": "^16.0.0"
   }
 }
