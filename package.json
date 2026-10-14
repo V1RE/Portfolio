@@ -23,7 +23,7 @@
     "@11ty/eleventy": "^0.10.0",
     "del": "^5.1.0",
     "feather-icons": "^4.25.0",
-    "gulp": "^4.0.2",
+    "gulp": "^5.0.0",
     "gulp-sass": "^4.0.2",
     "jquery": "^3.4.1",
     "netlify-cli": "^2.30.0"
